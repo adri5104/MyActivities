@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SegundaPantalla"
+    android:stretchColumns="*,">
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/Asignatura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:textAlignment="center"
+            android:textSize="40dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/titulo_segunda_pantalla"
+            tools:layout_editor_absoluteX="163dp"
+            tools:layout_editor_absoluteY="226dp"/>
+
+    </TableRow>
+    <TableRow>
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/libros" />
+    </TableRow>
+
+    <TableRow android:layout_height="180dp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/timerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cronometro"
+            android:fontFamily="sans-serif-black"
+            android:text="00 : 00 : 00"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="70sp" />
+
+
+    </TableRow>
+
+    <TableRow android:layout_height="50dp"
+        android:textAlignment="center"
+        android:layout_width="match_parent">
+        android:textAlignment="center"
+        android:layout_width="match_parent">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/boton_start_crono"
+            android:id="@+id/BotonStart_sp"
+            android:backgroundTint="@color/azul_oscuro"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:layout_marginTop="40dp"/>
+
+    </TableRow>
+
+    <TableRow  android:textAlignment="center">
+
+        <Button
+            android:id="@+id/BotonTerminar_sp"
+            android:layout_width="wrap_content"
+            android:backgroundTint="@color/azul_oscuro"
+            android:text="@string/boton_terminar_crono"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+
+    </TableRow>
+
+
+
+
+</TableLayout>

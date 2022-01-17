@@ -1,3 +1,40 @@
 <resources>
+
     <string name="app_name">MyActivities</string>
+
+    <!-- activity main -->
+    <string name="titulo_activity_main">SELECCIONA UNA ACTIVIDAD</string>
+    <string name="boton_comenzar">Comenzar actividad</string>
+    <string name="boton_comenzar_deporte">Comenzar actividad como deporte</string>
+    <string name="boton_modificar">Modificar Actividad</string>
+    <string name="boton_actualizar">Actualizar</string>
+    <string name="boton_tutorial">Tutorial</string>
+
+    <!-- modificar actividades -->
+    <string name="titulo_modificar_actividades">EDITAR ACTIVIDADES</string>
+    <string name="hint_modificar">Nombre de la actividad (máx. 15 caracteres)</string>
+    <string name="boton_nueva_actividad">NUEVO</string>
+    <string name="boton_borrar_actividad">BORRAR</string>
+    <string name="boton_borrar_todo">BORRAR TODO</string>
+
+    <!-- segunda pantalla -->
+    <string name="titulo_segunda_pantalla">CRONÓMETRO</string>
+    <string name="boton_start_crono">START</string>
+    <string name="boton_terminar_crono">Terminar actividad</string>
+
+    <!-- pantalla deporte -->
+    <string name="titulo_pantalla_deporte">ACTIVIDAD DEPORTIVA</string>
+    <string name="boton_start_crono_deporte">START</string>
+    <string name="boton_terminar_crono_deporte">Terminar actividad</string>
+
+    <!-- spinner para colores -->
+    <string-array name="coloresSpinner">
+        <item>Azul</item>
+        <item>Amarillo </item>
+        <item>Rojo</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps_ignorar">MapsActivity_IGNORAR</string>
+
 </resources>

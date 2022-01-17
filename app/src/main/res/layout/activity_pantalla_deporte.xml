@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PantallaDeporte"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/fragmento_superior"
+        android:name="com.example.myactivities.FragmentoSuperior_deporte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragmento_superior_deporte"
+        />
+
+
+    <fragment
+        android:id="@+id/fragmento_deporte"
+        android:name="com.example.myactivities.MapsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_maps" />
+
+
+</LinearLayout>

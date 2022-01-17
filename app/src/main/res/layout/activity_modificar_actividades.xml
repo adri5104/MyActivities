@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:stretchColumns="*,"
+    tools:context=".ModificarActividades">
+
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/titulo_modificar_actividades"
+            android:textAlignment="center"
+            android:layout_marginTop="40dp"
+            android:textSize="40sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="sans-serif-black"/>
+    </TableRow>
+    <TableRow>
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/editar" />
+
+    </TableRow>
+
+    <TableRow>
+
+        <EditText
+            android:textAlignment="center"
+            android:backgroundTint="@color/azul_clarito"
+            android:id="@+id/campoActividad"
+            android:hint="@string/hint_modificar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            />
+
+
+    </TableRow>
+
+
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/nuevo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/boton_nueva_actividad"
+            android:backgroundTint="@color/azul_oscuro"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+    </TableRow>
+    <TableRow>
+
+        <Button
+            android:id="@+id/borrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/boton_borrar_actividad"
+            android:backgroundTint="@color/azul_oscuro"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+
+    </TableRow>
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/borrarTodo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/boton_borrar_todo"
+            android:backgroundTint="@color/azul_oscuro"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            />
+
+
+    </TableRow>
+</TableLayout>
