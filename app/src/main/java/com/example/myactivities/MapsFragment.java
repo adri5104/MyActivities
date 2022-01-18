@@ -15,8 +15,6 @@
 
 
 package com.example.myactivities;
-
-
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -27,12 +25,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-
-
-
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -42,21 +36,24 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 
-public class MapsFragment extends SupportMapFragment implements OnMapReadyCallback {
 
+//Este fragment muestra el recorrido realizado en maps, en la pantalla
+//de actividad como deporte
+public class MapsFragment extends SupportMapFragment implements OnMapReadyCallback {
 
 
     private static LatLng prev = new LatLng(40.3, 40);
     boolean flag=false;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = super.onCreateView(inflater, container, savedInstanceState);
-
         getMapAsync(this);
         getLocalizacion();
         return rootView;
     }
 
+    //Permisos de acceso a la localizacion, etc.
     private void getLocalizacion() {
         int permiso = ContextCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_COARSE_LOCATION);
         if(permiso == PackageManager.PERMISSION_DENIED){
@@ -80,6 +77,7 @@ public class MapsFragment extends SupportMapFragment implements OnMapReadyCallba
 
         LocationManager locationManager = (LocationManager) getActivity().getSystemService(getContext().LOCATION_SERVICE);
 
+        //Se pinta el trazado en el mapa
         LocationListener locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
@@ -106,6 +104,7 @@ public class MapsFragment extends SupportMapFragment implements OnMapReadyCallba
                         .visible(true));
                 prev = miUbicacion;
             }
-        };}
+        }; locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
+    }
     }
 

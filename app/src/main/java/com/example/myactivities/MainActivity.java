@@ -15,10 +15,6 @@
 --------------------------------------------------
  */
 
-
-
-
-
 package com.example.myactivities;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -81,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     }
 
+    // Metodo privado para programar actividades en Google Calendar
     private void programarCalendar(View v)
     {
         Intent intent = new Intent (Intent.ACTION_INSERT);
