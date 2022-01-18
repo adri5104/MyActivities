@@ -7,6 +7,7 @@
     <string name="boton_comenzar">Comenzar actividad</string>
     <string name="boton_comenzar_deporte">Comenzar actividad como deporte</string>
     <string name="boton_modificar">Modificar Actividad</string>
+    <string name="boton_programar">Programar actividad futura</string>
     <string name="boton_actualizar">Actualizar</string>
     <string name="boton_tutorial">Tutorial</string>
 
@@ -36,5 +37,19 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_maps_ignorar">MapsActivity_IGNORAR</string>
+
+    <!-- Tutorial -->
+    <string name="tutorialTexto">
+
+
+
+Para poder registrar las actividades que realizas, es necesario que nos digas cuales son.\n\nPulsa el botón de MODIFICAR ACTIVIDAD y cuando hayas escrito el nombre del evento pulsa el botón NUEVO para guardar la actividad.\n\nTambién puedes eliminar otros eventos escribiéndolos aquí (de forma exacta y de uno en uno) y pulsando BORRAR, o bien eliminar todas las actividades pulsando BORRAR TODO.\n\n¡Recuerda pulsar el botón ACTUALIZAR en la pantalla principal cuando termines con tus actividades!\n\nCOMENZAR ACTIVIDAD:
+
+Ya sea deportiva o no, tu actividad se iniciará cuando pulses START.
+
+Puedes parar temporalmente el tiempo y volverlo a reanudar en el mismo lugar, pulsando STOP.\n\nCuando quieras finalizar la actividad pulsa el botón TERMINAR ACTIVIDAD y a continuación GUARDAR el evento en Google Calendar.
+
+\n\n¡Ya está registrado, buen trabajo! </string>
+
 
 </resources>

@@ -7,6 +7,21 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <!--
+
+            No. Matricula       Nombre
+
+                18755           María Suárez de Deza de Rábago
+
+                17707           Javier Bascuñana Labrador
+
+                18300           Adrián Siegbert Rieker González
+
+
+                repositorio del proyecto: https://github.com/adri5104/MyActivities.git
+
+
+        -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,6 +66,13 @@
         android:text="@string/boton_comenzar_deporte"
         android:layout_height="wrap_content"
         android:onClick="abrirPantallaDeporte"
+        android:backgroundTint="@color/teal_700"/>
+
+    <Button
+        android:id="@+id/boton4"
+        android:layout_width="match_parent"
+        android:text="@string/boton_programar"
+        android:layout_height="wrap_content"
         android:backgroundTint="@color/teal_700"/>
 
     <Button

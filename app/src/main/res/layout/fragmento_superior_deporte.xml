@@ -6,6 +6,22 @@
     android:stretchColumns="*,"
     tools:context=".FragmentoSuperior_deporte">
 
+    <!--
+
+            No. Matricula       Nombre
+
+                18755           María Suárez de Deza de Rábago
+
+                17707           Javier Bascuñana Labrador
+
+                18300           Adrián Siegbert Rieker González
+
+
+                repositorio del proyecto: https://github.com/adri5104/MyActivities.git
+
+
+        -->
+
     <!-- TODO: Update blank fragment layout -->
     <TableRow
         android:layout_width="match_parent"

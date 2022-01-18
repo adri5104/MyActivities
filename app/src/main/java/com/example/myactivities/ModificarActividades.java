@@ -1,3 +1,18 @@
+/* -----------------------------------------------
+    No. Matricula       Nombre
+
+        18755           María Suárez de Deza de Rábago
+
+        17707           Javier Bascuñana Labrador
+
+        18300           Adrián Siegbert Rieker González
+
+
+        repositorio del proyecto: https://github.com/adri5104/MyActivities.git
+
+--------------------------------------------------
+ */
+
 package com.example.myactivities;
 
 import androidx.appcompat.app.AlertDialog;
@@ -77,9 +92,9 @@ public class ModificarActividades extends AppCompatActivity  {
         GestorSQLite admin = new GestorSQLite(view.getContext(), "administracion", null , 1);
         SQLiteDatabase bd = admin.getWritableDatabase();
 
-        String nombre_ = nomActividad.getText().toString();
+        String nombre = nomActividad.getText().toString();
 
-        int cant = bd.delete("lista", "nombre = " + nombre_, null);
+        int cant = bd.delete("lista", "nombre = " + nombre, null);
         bd.close();
         nomActividad.setText("");
 

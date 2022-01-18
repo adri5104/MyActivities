@@ -1,3 +1,24 @@
+
+
+/* -----------------------------------------------
+    No. Matricula       Nombre
+
+        18755           María Suárez de Deza de Rábago
+
+        17707           Javier Bascuñana Labrador
+
+        18300           Adrián Siegbert Rieker González
+
+
+        repositorio del proyecto: https://github.com/adri5104/MyActivities.git
+
+--------------------------------------------------
+ */
+
+
+
+
+
 package com.example.myactivities;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -5,6 +26,7 @@ import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -23,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private Spinner MySpinner;
     private ArrayAdapter<String> adapter;
     private Button botonActualizar;
+    private Button BotonProgramarActividadFutura;
 
     //Esta lista enlazada almacena temporalmente los nombres
     // de las actividades almacenadas en la BD para cargarlos en el spinner.
@@ -47,6 +70,28 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 actualizar();
             }
         });
+
+        BotonProgramarActividadFutura = (Button) findViewById(R.id.boton4);
+        BotonProgramarActividadFutura.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                programarCalendar(view);
+            }
+        });
+
+    }
+
+    private void programarCalendar(View v)
+    {
+        Intent intent = new Intent (Intent.ACTION_INSERT);
+        intent.setData(CalendarContract.Events.CONTENT_URI);
+        intent.putExtra(CalendarContract.Events.TITLE, MySpinner.getSelectedItem().toString());
+        // intent.putExtra(CalendarContract.Events.EVENT_LOCATION, location.getText().toString());
+        intent.putExtra(CalendarContract.Events.EVENT_COLOR, "red");
+        intent.putExtra(CalendarContract.Events.DESCRIPTION, MySpinner.getSelectedItem().toString());
+        intent.putExtra(CalendarContract.Events.ALL_DAY, false );
+
+        startActivity(intent);
     }
 
     //Este metodo actualiza los datos del spinner cuando se han hecho cambios en la BD
@@ -63,6 +108,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 list_nombres.add(columna.getString(0));
             } while (columna.moveToNext());
         }
+
+
 
         columna.close();
         bd.close();
@@ -110,7 +157,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     {
         AlertDialog.Builder tutorial = new AlertDialog.Builder(this);
         tutorial.setTitle("Como usar esta app?");
-        tutorial.setMessage("sf");
+        tutorial.setMessage(getResources().getString(R.string.tutorialTexto));
         tutorial.setNeutralButton("cerrar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {

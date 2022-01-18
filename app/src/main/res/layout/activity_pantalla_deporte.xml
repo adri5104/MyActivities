@@ -7,6 +7,22 @@
     tools:context=".PantallaDeporte"
     android:orientation="vertical">
 
+
+    <!--
+
+            No. Matricula       Nombre
+
+                18755           María Suárez de Deza de Rábago
+
+                17707           Javier Bascuñana Labrador
+
+                18300           Adrián Siegbert Rieker González
+
+
+                repositorio del proyecto: https://github.com/adri5104/MyActivities.git
+
+
+        -->
     <fragment
         android:id="@+id/fragmento_superior"
         android:name="com.example.myactivities.FragmentoSuperior_deporte"
