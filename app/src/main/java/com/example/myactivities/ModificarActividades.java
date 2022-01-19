@@ -23,14 +23,13 @@ import android.content.DialogInterface;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
+
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
+
 import android.widget.Toast;
 
-import java.util.Calendar;
+
 
 public class ModificarActividades extends AppCompatActivity  {
 
@@ -79,7 +78,7 @@ public class ModificarActividades extends AppCompatActivity  {
         //registro.put("color_", colorSeleccionado);
 
         bd.insert("lista",null,registro);
-        Toast.makeText(view.getContext(), "Datos almacenados", Toast.LENGTH_SHORT).show();
+        Toast.makeText(view.getContext(), getResources().getString(R.string.textoAlta), Toast.LENGTH_SHORT).show();
         bd.close();
         nomActividad.setText("");
 
@@ -94,26 +93,26 @@ public class ModificarActividades extends AppCompatActivity  {
 
         String nombre = nomActividad.getText().toString();
 
-        int cant = bd.delete("lista", "nombre = " + nombre, null);
+        int cant = bd.delete("lista", "nombre = '" + nombre+"'", null);
         bd.close();
         nomActividad.setText("");
 
         if(cant == 1)
         {
-            Toast.makeText(view.getContext(), "Actividad eliminada", Toast.LENGTH_SHORT).show();
+            Toast.makeText(view.getContext(), getResources().getString(R.string.textoBaja), Toast.LENGTH_SHORT).show();
         }
         else
         {
-            Toast.makeText(view.getContext(), "No existe esa actividad", Toast.LENGTH_SHORT).show();
+            Toast.makeText(view.getContext(), getResources().getString(R.string.textoNoBaja), Toast.LENGTH_SHORT).show();
         }
     }
 
     public void borrarTodo(View view)
     {
         AlertDialog.Builder avisoBorrado = new AlertDialog.Builder(this);
-        avisoBorrado.setTitle("Borrar todos los datos");
-        avisoBorrado.setMessage("¿Deseas borrar todas las actividades de la lista?");
-        avisoBorrado.setPositiveButton("Si", new DialogInterface.OnClickListener() {
+        avisoBorrado.setTitle(getResources().getString(R.string.avisoBorrarTodo));
+        avisoBorrado.setMessage(getResources().getString(R.string.confirmacionBorrarTodo));
+        avisoBorrado.setPositiveButton(getResources().getString(R.string.confirmacion), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 GestorSQLite admin = new GestorSQLite(view.getContext(), "administracion", null , 1);
@@ -127,7 +126,7 @@ public class ModificarActividades extends AppCompatActivity  {
             }
         });
 
-        avisoBorrado.setNeutralButton("No", new DialogInterface.OnClickListener() {
+        avisoBorrado.setNeutralButton(getResources().getString(R.string.cancelacion), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //no se hace nada
@@ -136,7 +135,7 @@ public class ModificarActividades extends AppCompatActivity  {
         avisoBorrado.show();
 
         /*
-        */
+         */
     }
 
 

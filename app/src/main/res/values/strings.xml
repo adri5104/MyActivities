@@ -11,6 +11,8 @@
     <string name="boton_actualizar">Actualizar</string>
     <string name="boton_tutorial">Tutorial</string>
 
+    <string name="Texto_sin_actividad">"Primero deber añadir actividades y pulsar ¨Actualizar¨"</string>
+
     <!-- modificar actividades -->
     <string name="titulo_modificar_actividades">EDITAR ACTIVIDADES</string>
     <string name="hint_modificar">Nombre de la actividad (máx. 15 caracteres)</string>
@@ -18,15 +20,35 @@
     <string name="boton_borrar_actividad">BORRAR</string>
     <string name="boton_borrar_todo">BORRAR TODO</string>
 
+    <string name="textoAlta">Datos almacenados</string>
+
+
+    <string name="textoBaja">Actividad eliminada</string>
+    <string name="textoNoBaja">No existe esa actividad</string>
+
+    <string name="avisoBorrarTodo">Borrar todos los datos</string>
+    <string name="confirmacionBorrarTodo">¿Deseas borrar todas las actividades de la lista?</string>
+
+
     <!-- segunda pantalla -->
     <string name="titulo_segunda_pantalla">CRONÓMETRO</string>
     <string name="boton_start_crono">START</string>
     <string name="boton_terminar_crono">Terminar actividad</string>
 
+    <string name="terminarTitulo">Finalizar actividad</string>
+    <string name="terminarTexto">¿Has terminado la actividad?\n\n Se mandaran los datos a Google Calendar.</string>
+
+
     <!-- pantalla deporte -->
     <string name="titulo_pantalla_deporte">ACTIVIDAD DEPORTIVA</string>
     <string name="boton_start_crono_deporte">START</string>
     <string name="boton_terminar_crono_deporte">Terminar actividad</string>
+
+    <!-- textos repetidos -->
+    <string name="confirmacion">Si</string>
+    <string name="cancelacion">No</string>
+    <string name="start">START</string>
+    <string name="stop">STOP</string>
 
     <!-- spinner para colores -->
     <string-array name="coloresSpinner">
@@ -39,15 +61,24 @@
     <string name="title_activity_maps_ignorar">MapsActivity_IGNORAR</string>
 
     <!-- Tutorial -->
+    <string name="tutorialTitulo">"¿Cómo usar esta app?"</string>
+    <string name="tutorialCerrar">"Cerrar"</string>
     <string name="tutorialTexto">
 
 
 
-Para poder registrar las actividades que realizas, es necesario que nos digas cuales son.\n\nPulsa el botón de MODIFICAR ACTIVIDAD y cuando hayas escrito el nombre del evento pulsa el botón NUEVO para guardar la actividad.\n\nTambién puedes eliminar otros eventos escribiéndolos aquí (de forma exacta y de uno en uno) y pulsando BORRAR, o bien eliminar todas las actividades pulsando BORRAR TODO.\n\n¡Recuerda pulsar el botón ACTUALIZAR en la pantalla principal cuando termines con tus actividades!\n\nCOMENZAR ACTIVIDAD:
+
+Para poder registrar las actividades que realizas, es necesario que nos digas cuales son.\n\nPulsa el botón de
+MODIFICAR ACTIVIDAD y cuando hayas escrito el nombre del evento pulsa el botón NUEVO para guardar la actividad.\n\nTambién
+puedes eliminar otros eventos escribiéndolos aquí (de forma exacta y de uno en uno) y pulsando BORRAR, o bien eliminar todas
+las actividades pulsando BORRAR TODO.\n\n¡Recuerda pulsar el botón ACTUALIZAR en la pantalla principal cuando termines con tus
+actividades!\n\nCOMENZAR ACTIVIDAD:
 
 Ya sea deportiva o no, tu actividad se iniciará cuando pulses START.
 
-Puedes parar temporalmente el tiempo y volverlo a reanudar en el mismo lugar, pulsando STOP.\n\nCuando quieras finalizar la actividad pulsa el botón TERMINAR ACTIVIDAD y a continuación GUARDAR el evento en Google Calendar.\n\nPara programar un evento en Calendar pulsa PROGRAMAR ACTIVIDAD FUTURA\n\n
+Puedes parar temporalmente el tiempo y volverlo a reanudar en el mismo lugar, pulsando STOP.\n\nCuando quieras finalizar la actividad
+pulsa el botón TERMINAR ACTIVIDAD y a continuación GUARDAR el evento en Google Calendar.\n\nPara programar un evento en Calendar pulsa
+PROGRAMAR ACTIVIDAD FUTURA\n\n
 
 \n\n¡Ya está registrado, buen trabajo! </string>
 

@@ -105,10 +105,10 @@ public class SegundaPantalla extends AppCompatActivity {
     private void terminarActividad(View view)
     {
         AlertDialog.Builder resetAlert = new AlertDialog.Builder(this);
-        resetAlert.setTitle("Finalizar actividad");
-        resetAlert.setMessage("¿Has terminado la actividad?\n\n Se mandaran los datos a Google Calendar.");
+        resetAlert.setTitle(getResources().getString(R.string.terminarTitulo));
+        resetAlert.setMessage(getResources().getString(R.string.terminarTexto));
 
-        resetAlert.setPositiveButton("Si", new DialogInterface.OnClickListener()
+        resetAlert.setPositiveButton(getResources().getString(R.string.confirmacion), new DialogInterface.OnClickListener()
         {
             @Override
             public void onClick(DialogInterface dialogInterface, int i)
@@ -116,7 +116,7 @@ public class SegundaPantalla extends AppCompatActivity {
                 if(timerTask != null)
                 {
                     timerTask.cancel();
-                    setButtonUI("START", R.color.purple_500);
+                    setButtonUI(getResources().getString(R.string.boton_start_crono), R.color.purple_500);
                     time = 0.0;
                     timerText.setText(formatTime(0,0,0));
                     firsttimerStarted = false;
@@ -131,7 +131,7 @@ public class SegundaPantalla extends AppCompatActivity {
             }
         });
 
-        resetAlert.setNeutralButton("No", new DialogInterface.OnClickListener()
+        resetAlert.setNeutralButton(getResources().getString(R.string.cancelacion), new DialogInterface.OnClickListener()
         {
             @Override
             public void onClick(DialogInterface dialogInterface, int i)
@@ -149,7 +149,7 @@ public class SegundaPantalla extends AppCompatActivity {
         if(timerStarted == false)
         {
             timerStarted = true;
-            setButtonUI("STOP", R.color.purple_500);
+            setButtonUI(getResources().getString(R.string.stop), R.color.purple_500);
             if(firsttimerStarted == false)
             {
                 startTime = c.getTimeInMillis(); //Para calendar
@@ -160,7 +160,7 @@ public class SegundaPantalla extends AppCompatActivity {
         else
         {
             timerStarted = false;
-            setButtonUI("START", R.color.white);
+            setButtonUI(getResources().getString(R.string.start), R.color.white);
             endTime = c.getTimeInMillis();
             timerTask.cancel();
         }

@@ -1,5 +1,3 @@
-
-
 /* -----------------------------------------------
     No. Matricula       Nombre
 
@@ -133,7 +131,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             startActivity(solicitud);
         }
         else
-            Toast.makeText(getApplicationContext(),"Primero deber añadir actividades y pulsar ¨Actualizar¨",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),getResources().getString(R.string.Texto_sin_actividad),Toast.LENGTH_SHORT).show();
     }
 
     //Abre la pantalla de iniciar actividad como deporte
@@ -146,16 +144,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             startActivity(solicitud);
         }
         else
-            Toast.makeText(getApplicationContext(),"Primero deber añadir actividades y pulsar ¨Actualizar¨",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),getResources().getString(R.string.Texto_sin_actividad),Toast.LENGTH_SHORT).show();
     }
+
 
     //Abre el tutorial
     public void PantallaTutorial(View view)
     {
         AlertDialog.Builder tutorial = new AlertDialog.Builder(this);
-        tutorial.setTitle("Como usar esta app?");
+        tutorial.setTitle(getResources().getString(R.string.tutorialTitulo));
         tutorial.setMessage(getResources().getString(R.string.tutorialTexto));
-        tutorial.setNeutralButton("cerrar", new DialogInterface.OnClickListener() {
+        tutorial.setNeutralButton(getResources().getString(R.string.tutorialCerrar), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 

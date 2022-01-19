@@ -113,7 +113,7 @@ public class FragmentoSuperior_deporte extends Fragment {
         if(timerStarted == false)
         {
             timerStarted = true;
-            setButtonUI("STOP", R.color.white);
+            setButtonUI(getResources().getString(R.string.stop), R.color.white);
             if(firsttimerStarted == false)
             {
                 startTime = c.getTimeInMillis();
@@ -124,7 +124,7 @@ public class FragmentoSuperior_deporte extends Fragment {
         else
         {
             timerStarted = false;
-            setButtonUI("START", R.color.white);
+            setButtonUI(getResources().getString(R.string.start), R.color.white);
             endTime = c.getTimeInMillis();
             timerTask.cancel();
         }
@@ -161,9 +161,9 @@ public class FragmentoSuperior_deporte extends Fragment {
     private void terminar(View view)
     {
         AlertDialog.Builder resetAlert = new AlertDialog.Builder(getContext());
-        resetAlert.setTitle("Terminar actividad");
-        resetAlert.setMessage("¿Has terminado la actividad?\n\n Se mandaran los datos a Google Calendar.");
-        resetAlert.setPositiveButton("Si", new DialogInterface.OnClickListener()
+        resetAlert.setTitle(getResources().getString(R.string.terminarTitulo));
+        resetAlert.setMessage(getResources().getString(R.string.terminarTexto));
+        resetAlert.setPositiveButton(getResources().getString(R.string.confirmacion), new DialogInterface.OnClickListener()
         {
             @Override
             public void onClick(DialogInterface dialogInterface, int i)
@@ -171,7 +171,7 @@ public class FragmentoSuperior_deporte extends Fragment {
                 if(timerTask != null)
                 {
                     timerTask.cancel();
-                    setButtonUI("START", R.color.purple_500);
+                    setButtonUI(getResources().getString(R.string.start), R.color.purple_500);
                     time = 0.0;
                     timerText.setText(formatTime(0,0,0));
                     firsttimerStarted = false;
@@ -187,7 +187,7 @@ public class FragmentoSuperior_deporte extends Fragment {
             }
         });
 
-        resetAlert.setNeutralButton("No", new DialogInterface.OnClickListener()
+        resetAlert.setNeutralButton(getResources().getString(R.string.cancelacion), new DialogInterface.OnClickListener()
         {
             @Override
             public void onClick(DialogInterface dialogInterface, int i)
