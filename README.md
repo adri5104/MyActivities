@@ -13,7 +13,7 @@
 
 ------------------------------------------------
 
-Trabajo final de la asignatura de Programación en Android de la ETSII UPM
+App de Android para contabilizar distintas actividades
 
 Aplicación ¨MyActivities¨
 
